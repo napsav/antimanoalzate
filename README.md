@@ -15,14 +15,14 @@ Per il momento si possono usare solo le freccette direzionali, ma si possono cam
 	"tab"
 	"esc"
 	"escape"
-	"up"		Up arrow key
-	"down"		Down arrow key
-	"right"		Right arrow key
-	"left"		Left arrow key
+	"up"		Freccia su
+	"down"		Freccia giù
+	"right"		Freccia destra
+	"left"		Freccia sinistra
 	"home"
 	"end"
-	"pageup"
-	"pagedown"
+	"pageup"    CONSIGLIATO: pagina giù
+	"pagedown"  CONSIGLIATO: pagina su
 
 	"f1"
 	"f2"
