@@ -80,3 +80,16 @@ function volumeDown() {
 	log.innerHTML += "volume sotto\n"
 	httpGetAsync("http://"+ipSalvato+":"+portaSalvata+"/down")
 }
+
+function schermoAttivo() {
+	window.plugins.insomnia.keepAwake()
+	document.getElementById('schermoAttivo').classList.add('hidden')
+	document.getElementById('schermoNormale').classList.remove('hidden')
+}
+
+
+function schermoNormale() {
+	window.plugins.insomnia.allowSleepAgain()
+	document.getElementById('schermoAttivo').classList.remove('hidden')
+	document.getElementById('schermoNormale').classList.add('hidden')
+}

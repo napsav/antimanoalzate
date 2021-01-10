@@ -10,14 +10,17 @@
         <title>Hello World</title>
     </head>
     <body class="hidden">
+        <a id="schermoAttivo" class="start" onclick="schermoAttivo()">Tieni lo schermo attivo</a>
+        <a id="schermoNormale" class="stop hidden" onclick="schermoNormale()">Abilita lo spegnimento dello schermo</a><br>
 		<label for="indirizzoip">IP:</label>
 		<input type="text" name="indirizzoip" id="indirizzoip" placeholder="Indirizzo ip">
 		<label for="porta">Porta:</label>
 		<input type="text" name="porta" id="porta" placeholder="Porta" value="8080">
-		<button id="save" >Salva</button>
-		<div id="pronto" class="ready hidden">Pronto</div>
-		<pre id="log"></pre>
+		<button class="start" id="save" >Salva</button>
+		<div id="pronto" class="ready hidden">Pronto</div><br>
+		<textarea id="log" disabled></textarea>
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
+        <script type="text/javascript" src="js/Insomnia.js"></script>
     </body>
 </html>

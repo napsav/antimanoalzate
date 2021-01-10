@@ -26,4 +26,8 @@ xmlns:cdv="http://cordova.apache.org/ns/1.0">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <!-- for Android -->
+<feature name="Insomnia">
+  <param name="android-package" value="nl.xservices.plugins.Insomnia" />
+</feature>
 </widget>
