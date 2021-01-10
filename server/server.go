@@ -72,9 +72,9 @@ for _, i := range ifaces {
     }
 }
 fmt.Printf("------------------------------------\n")
-fmt.Printf("Tasto da premere per il volume giù SENZA VIRGOLETTE (consulta la lista su github per i tasti disponibili)\n")
+fmt.Printf("Tasto da premere per il volume giù SENZA VIRGOLETTE (consigliato: pagedown) (consulta la lista su github per i tasti disponibili)\n")
 fmt.Scanln(&down)
-fmt.Printf("Tasto da premere per il volume su SENZA VIRGOLETTE (consulta la lista su github per i tasti disponibili)\n")
+fmt.Printf("Tasto da premere per il volume su SENZA VIRGOLETTE (consigliato: pageup) (consulta la lista su github per i tasti disponibili)\n")
 fmt.Scanln(&up)
 fmt.Printf("----------PRONTO---------\n")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
