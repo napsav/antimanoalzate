@@ -93,3 +93,8 @@ function schermoNormale() {
 	document.getElementById('schermoAttivo').classList.remove('hidden')
 	document.getElementById('schermoNormale').classList.add('hidden')
 }
+
+function nascondi() {
+    document.getElementById('touch').classList.remove('hidden')
+    document.getElementById('normale').classList.add('hidden')
+}

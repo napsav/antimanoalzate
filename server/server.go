@@ -3,7 +3,8 @@ package main
 import (
     "fmt"
 	"log"
-	"net"
+    "net"
+    "strings"
 	"net/http"
 	"github.com/go-vgo/robotgo"
 )
@@ -45,11 +46,24 @@ func downHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "down!")
 }
 
+
 func main() {
+    messaggio := `
+___  ___               _   ___   _              _          ___  
+|  \/  |              (_) / _ \ | |            | |        |__ \ 
+| .  . |  __ _  _ __   _ / /_\ \| | ____  __ _ | |_   ___    ) |
+| |\/| | / _  || '_ \ | ||  _  || ||_  / / _  || __| / _ \  / / 
+| |  | || (_| || | | || || | | || | / / | (_| || |_ |  __/ |_|  
+\_|  |_/ \__,_||_| |_||_|\_| |_/|_|/___| \__,_| \__| \___| (_)  
+
+v1.0.2 - by Saverio Napolitano
+
+---------------------------------------------------------------
+`
 	http.HandleFunc("/up", upHandler)
 	http.HandleFunc("/down", downHandler)
-	fmt.Printf("Server in ascolto alla porta 8080\n")
-	fmt.Printf("Nell'app inserisci l'indirizzo qui sotto che inizia per '192.168.1.xxx' o '192.168.0.xxx'\n")
+	fmt.Printf(messaggio)
+	fmt.Printf("Nell'app inserisci l'indirizzo che trovi sotto che inizia per '192.168.1.xxx' o '192.168.0.xxx'\nSe non funziona il primo, prova altri indirizzi.\n")
     fmt.Printf("------------------------------------\n")
 	ifaces, err := net.Interfaces()
 if err != nil{
@@ -68,7 +82,9 @@ for _, i := range ifaces {
         case *net.IPAddr:
                 ip = v.IP
         }
-        fmt.Printf("Possibile indirizzo ip: "+ip.String()+"\n")
+        if strings.Contains(ip.String(), "192.168.1.") || strings.Contains(ip.String(), "192.168.0.") {
+            fmt.Printf("Possibile indirizzo ip: "+ip.String()+"\n")
+        }
     }
 }
 fmt.Printf("------------------------------------\n")
@@ -80,5 +96,6 @@ fmt.Printf("----------PRONTO---------\n")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
         log.Fatal(err)
     }
+    fmt.Printf("Server in ascolto alla porta 8080\n")
 }
 

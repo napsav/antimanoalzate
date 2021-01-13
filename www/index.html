@@ -12,13 +12,22 @@
     <body class="hidden">
         <a id="schermoAttivo" class="start" onclick="schermoAttivo()">Tieni lo schermo attivo</a>
         <a id="schermoNormale" class="stop hidden" onclick="schermoNormale()">Abilita lo spegnimento dello schermo</a><br>
+        <div id="touch" class="hidden" style="height: 100%; width: 100%; position:fixed">
+            <button class="start" style="width: 90%; height:45%" onclick="volumeUp()">Su</button>
+            <button class="stop" style="width: 90%; height:45%" onclick="volumeDown()" >Giù</button>
+        </div>
+        <div id="normale">
 		<label for="indirizzoip">IP:</label>
 		<input type="text" name="indirizzoip" id="indirizzoip" placeholder="Indirizzo ip">
 		<label for="porta">Porta:</label>
 		<input type="text" name="porta" id="porta" placeholder="Porta" value="8080">
 		<button class="start" id="save" >Salva</button>
-		<div id="pronto" class="ready hidden">Pronto</div><br>
-		<textarea id="log" disabled></textarea>
+		<div id="pronto" class="ready hidden">Pronto<br>
+            <a class="start" onclick="nascondi()">Modalità touch (piedi o gomito)</a>
+        </div><br>
+        <textarea id="log" disabled></textarea>
+    </div>
+    <p style="float:right">1.0.2</p>
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
         <script type="text/javascript" src="js/Insomnia.js"></script>
