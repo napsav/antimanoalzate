@@ -4,7 +4,7 @@ App per android che ti permette di controllare il computer con i tasti del volum
 
 Per il momento si possono usare solo le freccette direzionali, ma si possono cambiare andando a modificare il file server.go.
 
-# TASTI DISPONIBILI (derivata da robotgo)#
+# TASTI DISPONIBILI (derivata da robotgo) #
 ## RICORDA DI TOGLIERE LE VIRGOLETTE QUANDO LE INSERISCI NEL PROGRAMMA ##
 
 	"A-Z a-z 0-9"
